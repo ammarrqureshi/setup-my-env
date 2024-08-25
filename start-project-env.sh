@@ -38,7 +38,7 @@ tmux split-window -h
 tmux new-window -n editor
 
 # Start Neovim in the new window
-tmux send-keys -t "$session_name:editor" 'nvim' C-m
+tmux send-keys -t "$session_name:editor" 'nvim .' C-m
 
 # Attach to the tmux session
 tmux attach-session -t "$session_name"
