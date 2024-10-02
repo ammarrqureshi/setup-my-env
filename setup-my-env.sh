@@ -5,6 +5,8 @@ install_package() {
   if command -v apt-get >/dev/null; then
     sudo apt-get update
     sudo apt-get install -y "$1"
+  elif command -v snap >/dev/null; then
+    sudo snap install -y "$1"
   elif command -v yum >/dev/null; then
     sudo yum install -y "$1"
   elif command -v brew >/dev/null; then
