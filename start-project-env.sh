@@ -6,7 +6,6 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
-# Assign the first argument to the project_dir variable
 project_dir="$1"
 
 # Check if the directory exists
