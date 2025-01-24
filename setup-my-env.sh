@@ -3,7 +3,11 @@
 # Function to check and install a package using the appropriate package manager
 install_package() {
   if command -v apt-get >/dev/null; then
-    sudo apt-get update
+
+    sudo apt update
+    sudo apt install build-essential
+    sudo apt install fzf
+    sudo add-apt-repository ppa:neovim-ppa/unstable
     sudo apt-get install -y "$1"
   elif command -v snap >/dev/null; then
     sudo snap install -y "$1"
