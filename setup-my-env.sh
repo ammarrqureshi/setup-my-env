@@ -30,6 +30,7 @@ install_package() {
 # Install Neovim
 install_package neovim
 
+git clone https://github.com/LazyVim/starter ~/.config/nvim
 # Clone  Neovim configuration from GitHub
 git clone https://github.com/ammarrqureshi/nvim-config.git ~/.config/nvim
 
