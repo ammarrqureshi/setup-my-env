@@ -5,8 +5,8 @@ install_package() {
   if command -v apt-get >/dev/null; then
 
     sudo apt update
-    sudo apt install build-essential
-    sudo apt install fzf
+    sudo apt install -y build-essential
+    sudo apt install -y fzf
     sudo add-apt-repository ppa:neovim-ppa/unstable
     sudo apt-get install -y "$1"
   elif command -v snap >/dev/null; then
